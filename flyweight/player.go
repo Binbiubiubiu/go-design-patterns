@@ -3,8 +3,8 @@ package main
 type Player struct {
 	dress      Dress
 	playerType string
-	lat        int
-	long       int
+	// lat        int
+	// long       int
 }
 
 func newPlayer(playerType, dressType string) *Player {
@@ -15,7 +15,7 @@ func newPlayer(playerType, dressType string) *Player {
 	}
 }
 
-func (p *Player) newLocation(lat, long int) {
-	p.lat = lat
-	p.long = long
-}
+// func (p *Player) newLocation(lat, long int) {
+// 	p.lat = lat
+// 	p.long = long
+// }
