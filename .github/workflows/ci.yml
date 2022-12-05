@@ -12,6 +12,7 @@ on:
     
 permissions:
   contents: read
+  pull-requests: read
 
 jobs:
 
@@ -38,95 +39,141 @@ jobs:
             ${{ runner.os }}-go-${{ matrix.go-version }}-
     - uses: actions/checkout@v3
 
-    - name: Run golangci-lint adapter
+    - name: Run golangci-lint abstract-factory
       uses: golangci/golangci-lint-action@v3
       with:
         working-directory: abstract-factory
+        only-new-issues: true
+
     - name: Run golangci-lint adapter
       uses: golangci/golangci-lint-action@v3
       with:
         working-directory: adapter
-    - name: Run golangci-lint adapter
+        only-new-issues: true
+
+    - name: Run golangci-lint bridge
       uses: golangci/golangci-lint-action@v3
       with:
         working-directory: bridge
-    - name: Run golangci-lint adapter
+        only-new-issues: true
+
+    - name: Run golangci-lint builder
       uses: golangci/golangci-lint-action@v3
       with:
         working-directory: builder
-    - name: Run golangci-lint adapter
+        only-new-issues: true
+
+    - name: Run golangci-lint chain-of-responsibility
       uses: golangci/golangci-lint-action@v3
       with:
         working-directory: chain-of-responsibility
-    - name: Run golangci-lint adapter
+        only-new-issues: true
+
+    - name: Run golangci-lint command
       uses: golangci/golangci-lint-action@v3
       with:
         working-directory: command
-    - name: Run golangci-lint adapter
+        only-new-issues: true
+
+    - name: Run golangci-lint composite
       uses: golangci/golangci-lint-action@v3
       with:
         working-directory: composite
-    - name: Run golangci-lint adapter
+        only-new-issues: true
+
+    - name: Run golangci-lint decorator
       uses: golangci/golangci-lint-action@v3
       with:
         working-directory: decorator
-    - name: Run golangci-lint adapter
+        only-new-issues: true
+
+    - name: Run golangci-lint facade
       uses: golangci/golangci-lint-action@v3
       with:
         working-directory: facade
-    - name: Run golangci-lint adapter
+        only-new-issues: true
+
+    - name: Run golangci-lint factory-method
       uses: golangci/golangci-lint-action@v3
       with:
         working-directory: factory-method
-    - name: Run golangci-lint adapter
+        only-new-issues: true
+
+    - name: Run golangci-lint flyweight
       uses: golangci/golangci-lint-action@v3
       with:
         working-directory: flyweight
-    - name: Run golangci-lint adapter
+        only-new-issues: true
+
+    - name: Run golangci-lint iterator
       uses: golangci/golangci-lint-action@v3
       with:
         working-directory: iterator
-    - name: Run golangci-lint adapter
+        only-new-issues: true
+        
+    - name: Run golangci-lint mediator
       uses: golangci/golangci-lint-action@v3
       with:
         working-directory: mediator
-    - name: Run golangci-lint adapter
+        only-new-issues: true
+
+    - name: Run golangci-lint memento
       uses: golangci/golangci-lint-action@v3
       with:
         working-directory: memento
-    - name: Run golangci-lint adapter
+        only-new-issues: true
+
+    - name: Run golangci-lint observer
       uses: golangci/golangci-lint-action@v3
       with:
         working-directory: observer
-    - name: Run golangci-lint adapter
+        only-new-issues: true
+
+    - name: Run golangci-lint prototype
       uses: golangci/golangci-lint-action@v3
       with:
         working-directory: prototype
-    - name: Run golangci-lint adapter
+        only-new-issues: true
+
+    - name: Run golangci-lint proxy
       uses: golangci/golangci-lint-action@v3
       with:
         working-directory: proxy
-    - name: Run golangci-lint adapter
+        only-new-issues: true
+        
+    - name: Run golangci-lint singleton-01
       uses: golangci/golangci-lint-action@v3
       with:
         working-directory: singleton-01
-    - name: Run golangci-lint adapter
+        only-new-issues: true
+        
+    - name: Run golangci-lint singleton-02
       uses: golangci/golangci-lint-action@v3
       with:
         working-directory: singleton-02
-    - name: Run golangci-lint adapter
+        only-new-issues: true
+        
+    - name: Run golangci-lint state
       uses: golangci/golangci-lint-action@v3
       with:
         working-directory: state
-    - name: Run golangci-lint adapter
+        only-new-issues: true
+        
+    - name: Run golangci-lint strategy
       uses: golangci/golangci-lint-action@v3
       with:
         working-directory: strategy
-    - name: Run golangci-lint adapter
+        only-new-issues: true
+        
+    - name: Run golangci-lint template-method
       uses: golangci/golangci-lint-action@v3
       with:
         working-directory: template-method
-    - name: Run golangci-lint adapter
+        only-new-issues: true
+        
+    - name: Run golangci-lint visitor
       uses: golangci/golangci-lint-action@v3
       with:
         working-directory: visitor
+        only-new-issues: true
+        
