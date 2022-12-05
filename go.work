@@ -5,12 +5,23 @@ use (
 	./adapter
 	./bridge
 	./builder
+	./chain-of-responsibility
+	./command
 	./composite
 	./decorator
 	./facade
 	./factory-method
 	./flyweight
+	./iterator
+	./mediator
+	./memento
+	./observer
 	./prototype
+	./proxy
 	./singleton-01
 	./singleton-02
+	./state
+	./strategy
+	./template-method
+	./visitor
 )
