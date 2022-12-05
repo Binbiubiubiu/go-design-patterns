@@ -6,10 +6,7 @@ type UserIterator struct {
 }
 
 func (u *UserIterator) hasNext() bool {
-	if u.index < len(u.users) {
-		return true
-	}
-	return false
+	return u.index < len(u.users)
 }
 
 func (u *UserIterator) getNext() *User {
