@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 type AreaCalculator struct {
-	area int
+	// area int
 }
 
 func (a *AreaCalculator) visitForSquare(s *Square) {

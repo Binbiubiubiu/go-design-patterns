@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"log"
+)
 
 func main() {
 	// otp := Otp{}
@@ -21,12 +24,18 @@ func main() {
 	o := Otp{
 		iOtp: smsOTP,
 	}
-	o.genAndSendOTP(4)
+	err := o.genAndSendOTP(4)
+	if err != nil {
+		log.Fatal(err)
+	}
 
 	fmt.Println("")
 	emailOTP := &Email{}
 	o = Otp{
 		iOtp: emailOTP,
 	}
-	o.genAndSendOTP(4)
+	err = o.genAndSendOTP(4)
+	if err != nil {
+		log.Fatal(err)
+	}
 }
